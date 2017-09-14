@@ -7,7 +7,7 @@ lib.webFontTxtFilters = {};
 lib.properties = {
 	width: 250,
 	height: 250,
-	fps: 60,
+	fps: 30,
 	color: "#FFFFFF",
 	webfonts: {},
 	manifest: [
@@ -1778,7 +1778,7 @@ p.nominalBounds = new cjs.Rectangle(-98,-85,199,179);
 
 
 (lib.Symbol12 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
 	this.mc2 = new lib.Symbol14();
@@ -2001,7 +2001,7 @@ p.nominalBounds = new cjs.Rectangle(-142,-136,268,272);
 
 
 (lib.logo_1_1 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
 	this.l8 = new lib.Symbol8();
@@ -2045,6 +2045,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		var repeat = 2;
 		
 		r.ps1.x = r.ps2.x = r.ps3.x = 500;
+		TweenMax.lagSmoothing(1000, 300);
 		
 		var tl = new TimelineLite();
 		tl.fromTo(r.blk, 1.0, {alpha:1}, {alpha:0, ease:Power0.easeNone})
@@ -2053,7 +2054,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		  
 		  .from(r.sc1.bg, 1.5, {scaleX:0.0, scaleY:0.0, ease:Expo.easeInOut}, 1.5)
 		  .from(r.sc1.p1.mc1, 1.6, {scaleX:0.0, scaleY:0.0, ease:Expo.easeInOut}, 1.8)
-		  .from(r.sc1.p1.mc2, 1.9, {x:"+=450", y:"+=450", ease:Expo.easeInOut}, 2.0)
+		  .from(r.sc1.p1.mc2, 1.9, {x:"+=450", y:"+=450", scaleX:3.0, scaleY:3.0, alpha:0, ease:Expo.easeInOut}, 2.0)
 		  
 		  .to(r.sc1.p1, 1.0, {scaleX:0.75, scaleY:0.75, y:-34, ease:Expo.easeInOut}, 4.5)
 		  .staggerFrom([r.sc1.t1, r.sc1.t2, r.sc1.t3], 1.0, {y:"+=100", ease:Expo.easeOut}, 0.1, 5.00)
@@ -2075,7 +2076,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		  //2
 		  .staggerFrom([r.sc2.bg1, r.sc2.bg2], 1.5, {scaleX:0.0, scaleY:0.0, ease:Expo.easeInOut}, 0.20, 12+1.50)
 		  .from(r.sc2.p1.mc1, 1.6, {scaleX:0.0, scaleY:0.0, ease:Expo.easeInOut}, 12+1.8)
-		  .from(r.sc2.p1.mc2, 1.9, {x:"+=450", y:"+=450", ease:Expo.easeInOut}, 12+2.0)
+		  .from(r.sc2.p1.mc2, 1.9, {x:"+=450", y:"+=450", scaleX:3.0, scaleY:3.0, alpha:0, ease:Expo.easeInOut}, 12+2.0)
 		  
 		  .to(r.sc2.p1, 1.0, {scaleX:0.75, scaleY:0.75, y:-34, ease:Expo.easeInOut}, 12+4.5)
 		  .staggerFrom([r.sc2.t1, r.sc2.t2], 1.0, {y:"+=100", ease:Expo.easeOut}, 0.1, 12+5.00)
@@ -2098,7 +2099,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		  //3
 		  .from(r.sc3.bg, 1.5, {scaleX:0.0, scaleY:0.0, ease:Expo.easeInOut}, 13+12+1.5)
 		  .from(r.sc3.p1.mc1, 1.6, {scaleX:0.0, scaleY:0.0, ease:Expo.easeInOut}, 13+12+1.8)
-		  .from(r.sc3.p1.mc2, 1.9, {x:"+=450", y:"+=450", ease:Expo.easeInOut}, 13+12+2.0)
+		  .from(r.sc3.p1.mc2, 1.9, {x:"+=450", y:"+=450", scaleX:3.0, scaleY:3.0, alpha:0, ease:Expo.easeInOut}, 13+12+2.0)
 		  
 		  .to(r.sc3.p1, 1.0, {scaleX:0.75, scaleY:0.75, y:-34, ease:Expo.easeInOut}, 13+12+4.5)
 		  .staggerFrom([r.sc3.t1, r.sc3.t2, r.sc3.t3], 1.0, {y:"+=100", ease:Expo.easeOut}, 0.1, 13+12+5.00)
@@ -2115,7 +2116,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		  .staggerFrom([r.ps3.logo.l1, r.ps3.logo.l2, r.ps3.logo.l3, r.ps3.logo.l4], 1.0, {x:"-=200", y:"+=200", ease:Expo.easeOut}, 0.1, 13+12+12.00)
 		  .from(r.ps3.logo.l5, 1.0, {x:"+=200", alpha:0, ease:Expo.easeOut}, 13+12+12.00)
 		  .from(r.ps3.t1, 1.0, {y:"+=200", alpha:0, ease:Expo.easeOut}, 13+12+12.00)
-		  .from(r.ps3.btn, 1.0, {scaleX:1.5, scaleY:1.5, alpha:0, ease:Expo.easeOut}, 13+12+12.50)
+		  .from(r.ps3.btn, 1.0, {scaleX:1.5, scaleY:1.5, alpha:0, ease:Expo.easeOut, onComplete:allStop}, 13+12+12.50)
 		  
 		  
 		  //.call(replay)
@@ -2141,7 +2142,11 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 			r.ps1.x = r.ps2.x = r.ps3.x = 500;
 			tl.play(0);
 		}
-		  
+		
+		function allStop() {
+			TweenMax.killAll();
+			createjs.Ticker.setFPS(1);
+		}
 		
 		//var z = r.logo_1;
 		function template(z, dlit, newX, newY, rot, alpha, scX, scY, ease, del) {
